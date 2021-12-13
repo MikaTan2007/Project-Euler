@@ -29,9 +29,9 @@ def find_factor(num):
     
     return factor_num
 
-num_count = 0
+num_count = 12374
 
-while find_factor(triangle_num(num_count)) < 5000:
+while find_factor(triangle_num(num_count)) < 500:
 
     print(num_count, triangle_num(num_count), find_factor(triangle_num(num_count)))
     
