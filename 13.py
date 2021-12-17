@@ -119,8 +119,11 @@ for num in range(0,5000):
         separated_sequence.append(sequence)
         
 
-
+total = 0
 for sequence in separated_sequence:
     sequence = ''.join(sequence)
-    print(sequence)
+    total += int(sequence)
+
+print(total)
+
     
