@@ -21,4 +21,5 @@ for num in range(1,1000001):
     if sequence > longest_sequence:
         longest_sequence = sequence
         seq_num = num
-    print(seq_num, longest_sequence)
+
+print(seq_num, longest_sequence)
