@@ -22,11 +22,6 @@ for num in range(1,100):
     if sequence > longest_sequence:
         longest_sequence = sequence
         seq_num = num
-<<<<<<< Updated upstream
-
-print(seq_num, longest_sequence)
-=======
     print(seq_num, longest_sequence)
     
 print("Program run time: " + str(time.time() - start_time))
->>>>>>> Stashed changes
