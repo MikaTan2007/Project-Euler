@@ -1,3 +1,10 @@
+"""
+Uses the 6k+-1
+"""
+
+import time
+start_time = time.time()
+
 def isprime(num):
     if num <= 3:
         if num > 1:
@@ -24,10 +31,9 @@ count = 0
 while len(primes) < 10001:
     if isprime(count) == True:
         primes.append(count)
-        print(count)
     count += 1
 
-print(primes)
-
+print(primes[-1])
+print("Program run time: " + str(time.time() - start_time))
     
 
