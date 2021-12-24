@@ -1,5 +1,3 @@
-import math
-
 def isprime(num):
     if num <= 3:
         if num > 1:
