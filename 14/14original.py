@@ -2,7 +2,9 @@
 If n is even, n/2
 If n is odd, 3n + 1
 
-Program run time: 26.419947862625122
+Unoptimized Code
+
+Program run time: 43.70179033279419
 837799 524 - Number, Highest Sequence
 """
 
