@@ -28,7 +28,7 @@ number_dict = {
     "90": "ninety"
 }
 
-common_occurences = ["hundred", "and", "ty", "teen"]
+common_occurences = ["hundred", "and", "ty"]
 
 def convert_to_word(num):
     converted = ""
@@ -42,17 +42,37 @@ def convert_to_word(num):
                     if key[0] == num[0]:
                         converted = number_dict[key] + " " + number_dict[num[1]]
 
+        if len(num) == 3:
+
+            if num[1] == "0" and num[2] == "0":
+                converted = number_dict[num[0]] + " " + common_occurences[0]
+                return converted
+            
+            converted = number_dict[num[0]] + " " + common_occurences[0] + " " + common_occurences[1]
+
+            num = num[1] + num[2]
+
+            if num[0] == "0":
+                num = num[1]
+
+            try:
+                converted += " " + number_dict[num]
+            except:
+                for key in number_dict:
+                    if len(key) == 2:
+                        if key[0] == num[0]:
+                            converted += " " + number_dict[key] + " " + number_dict[num[1]]
+        
+        if len(num) == 4:
+            converted = "one thousand"
+
     return converted
 
-for num in range(1,100):
-    print(num, convert_to_word(num))
+total = 0
 
-"""
-249 = two hundred and forty nine
+for num in range(1,1001):
+    conversion = convert_to_word(num)
+    conversion = conversion.replace(" ","")
+    total += len(conversion)
 
-371 = three hundred and seventy one
-
-369 = three hundred and sixty nine
-
-111 = one hundred and eleven
-"""
+print(total)
