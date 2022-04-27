@@ -67,33 +67,8 @@ while year <= 2000:
             day = days[week_index]
             date += 1
 
-            print(date, day, month, year)
-
             if date == 1 and day == "Sun":
                 sundays += 1
-
-        """amount_of_days = month_days_dict[month_index]
-
-        if month_index == "Feb":
-            if year % 4 == 0:
-                amount_of_days = amount_of_days[1]
-            else:
-                amount_of_days = amount_of_days[0]
-        
-        date_index = 1
-        day_index = days.index(day)
-
-        while date_index <= amount_of_days:
-            date_index += 1
-            date += 1
-            if day_index != 6:
-                day_index += 1
-            else:
-                day_index = 0
-            
-            day = days[day_index]
-
-            print(date, day, month, year)"""
 
     year += 1
 
